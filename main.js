@@ -11,13 +11,13 @@ function getComputerChoice(){
     let compChoice = Math.floor(Math.random() * choices.length);
     
     if (compChoice === 0){
-        return 'rock';
+        return choices[0];
     }
     else if (compChoice === 1){
-        return 'paper';
+        return choices[1];
     }
     else if (compChoice === 2){
-        return 'scissors';
+        return choices[2];
     }
     return;
 }   
