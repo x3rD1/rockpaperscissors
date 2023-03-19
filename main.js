@@ -57,7 +57,7 @@ function compareChoices(playerChoice,computerChoice){
 function game(){
     for (let i = 0; i < 5; i++){
         //This allows the user to be prompted 5 times
-        playerChoice = prompt('Rock Paper or Scissors?');
+        playerChoice = prompt('Rock Paper or Scissors?').toLowerCase();
         //This tells you if you win or lose the round
         console.log(compareChoices(playerChoice,getComputerChoice()));
     }
