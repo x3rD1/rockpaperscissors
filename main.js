@@ -1,5 +1,5 @@
 // Create a variable for player's choice which will be prompted soon
-let playerChoice;
+/* let playerChoice; */
 
 //Create a score board
 let playerScore = 0;
@@ -51,16 +51,11 @@ function compareChoices(playerChoice,computerChoice){
         playerScore++
         return 'You win!'
     }
+    return;
 }
 
 //Create a function called game
 function game(){
-    for (let i = 0; i < 5; i++){
-        //This allows the user to be prompted 5 times
-        playerChoice = prompt('Rock Paper or Scissors?').toLowerCase();
-        //This tells you if you win or lose the round
-        console.log(compareChoices(playerChoice,getComputerChoice()));
-    }
 
     if (playerScore > computerScore){
         console.log('You win the game!');
@@ -73,4 +68,27 @@ function game(){
     }
 }
 
-game();
+
+
+//add an event listeners to the buttons
+
+const buttonOne = document.querySelector('.buttonOne');
+const buttonTwo = document.querySelector('.buttonTwo');
+const buttonThree = document.querySelector('.buttonThree');
+
+buttonOne.addEventListener('click', () => {
+    console.log(compareChoices('rock', getComputerChoice()))
+    console.log(playerScore)
+    console.log(computerScore)
+});
+buttonTwo.addEventListener('click', () => {
+    console.log(compareChoices('paper', getComputerChoice()))
+    console.log(playerScore)
+    console.log(computerScore)
+});
+buttonThree.addEventListener('click', () => {
+    console.log(compareChoices('scissors', getComputerChoice()))
+    console.log(playerScore)
+    console.log(computerScore)
+});
+
