@@ -1,0 +1,39 @@
+body {
+    background-image: url(/ocean-sea-waves-with-white-foam-nature-landscape/1563.jpg);
+    background-size: cover;
+}
+.scoreContainer {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: monospace;
+    font-size: 48px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    gap: 200px;
+}
+
+.buttonOne, .buttonTwo, .buttonThree {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.result {
+    font-family: monospace;
+    font-size: 48px;
+    margin-top: 90px;
+}
+
+img {
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+}
+
+.announce {
+    text-align: center;
+}
