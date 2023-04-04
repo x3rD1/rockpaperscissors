@@ -25,34 +25,48 @@ function getComputerChoice(){
 // Create a function that compares player's choice and computer's choice
 function compareChoices(playerChoice,computerChoice){
     if (playerChoice === computerChoice){
+        draw.play();
         return `Draw! Both chose ${playerChoice}`;
     }
     else if (playerChoice === 'Rock' && computerChoice === 'Paper'){
         computerScore++
+        incorrect.play();
         return 'You lose! Computer chose Paper.'
     }
     else if (playerChoice === 'Rock' && computerChoice === 'Scissors'){
         playerScore++
+        correct.play();
         return 'You win! Computer chose Scissors.'
     }
     else if (playerChoice === 'Paper' && computerChoice === 'Rock'){
         playerScore++
+        correct.play();
         return 'You win! Computer chose Rock.'
     }
     else if (playerChoice === 'Paper' && computerChoice === 'Scissors'){
         computerScore++
+        incorrect.play();
         return 'You lose! Computer chose Scissors.'
     }
     else if (playerChoice === 'Scissors' && computerChoice === 'Rock'){
         computerScore++
+        incorrect.play();
         return 'You lose! Computer chose Rock.'
     }
     else if (playerChoice === 'Scissors' && computerChoice === 'Paper'){
         playerScore++
+        correct.play();
         return 'You win! Computer chose Paper.'
     }
     return;
 }
+
+//audio
+const audio = document.querySelector('audio[data-key="omg"]');
+const wow = document.querySelector('audio[data-key="wow"]');
+const correct = document.querySelector('audio[data-key="correct"]');
+const incorrect = document.querySelector('audio[data-key="incorrect"]');
+const draw = document.querySelector('audio[data-key="draw"]');
 
 //Create a function called game
 function game(){
@@ -72,9 +86,7 @@ function game(){
     const again = document.createElement('p');
     again.textContent = 'Press any buttons to play again.'
     again.setAttribute('style', 'margin-top: -1px;');
-    //audio
-    const audio = document.querySelector('audio[data-key="omg"]');
-    const wow = document.querySelector('audio[data-key="wow"]');
+
 
     buttonOne.addEventListener('click', () => {
         announce.textContent = compareChoices('Rock', getComputerChoice());
