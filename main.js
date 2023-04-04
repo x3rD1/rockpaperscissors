@@ -73,7 +73,7 @@ function game(){
     again.textContent = 'Press any buttons to play again.'
     again.setAttribute('style', 'margin-top: -1px;');
     //audio
-    const audio = document.querySelector('audio[data-key="bano"]');
+    const audio = document.querySelector('audio[data-key="omg"]');
     const wow = document.querySelector('audio[data-key="wow"]');
 
     buttonOne.addEventListener('click', () => {
