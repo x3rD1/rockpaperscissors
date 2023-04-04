@@ -71,7 +71,7 @@ function game(){
     const announce = document.querySelector('.announce');
     const again = document.createElement('p');
     again.textContent = 'Press any buttons to play again.'
-
+    again.setAttribute('style', 'margin-top: -1px;');
     //audio
     const audio = document.querySelector('audio[data-key="bano"]');
     const wow = document.querySelector('audio[data-key="wow"]');
